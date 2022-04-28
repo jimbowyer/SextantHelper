@@ -14,8 +14,9 @@ namespace SextantHelper
         public PageSights()
         {
             InitializeComponent();
-            lvSights.ItemsSource = new List<Sight>();
-            lvSights.ItemsSource = mSightList;
+            cvSights.ItemsSource = new List<Sight>();
+            cvSights.ItemsSource = mSightList;
+
 
             Device.StartTimer(TimeSpan.FromSeconds(1 / 60f), () =>
             {
@@ -52,7 +53,6 @@ namespace SextantHelper
                                         keyboard: Keyboard.Numeric, "");
                         }
                     }
-
                     else
                     {
                         await DisplayAlert("Please re-enter", "Must be int", "OK");
@@ -71,27 +71,35 @@ namespace SextantHelper
                             if (bValidMin)
                             {
                                 newSight = new Sight(mUtcTime, iDegrees, dMinutes);
-                                mSightList.Add(newSight);
-                                
+                                mSightList.Add(newSight);                    
                             }
                         } //while min
                     }
                 } //while deg
 
-                //Store result as new Sight obj, add to list *TO DO*... either List<t> or GUI List obj
+                //reset collection view. *TO DO*... persist state between app starts
                 if (newSight != null)
                 {
-                    
-                    lvSights.ItemsSource = null;
-                    lvSights.ItemsSource = mSightList;
+                    cvSights.ItemsSource = null;
+                    cvSights.ItemsSource = mSightList;  
                     
                 }
 
                 mbSnapping = false; //allow clock refresh again
 
             }; //btnSnap
+
         } //ctor
 
+        async void OnDeleteRequest(object sender, EventArgs e)
+        {
+            bool bDelete =  await DisplayAlert("Delete?", "Delete sight record?", "OK", "Cancel");
+            if (bDelete) 
+            {
+                //delete item
+                await DisplayAlert("Deleted", "To implement", "OK");
+            }
+        }
 
         private SKPaint GetPaintColor(SKPaintStyle style, string hexColor, float strokeWidth = 0, SKStrokeCap cap = SKStrokeCap.Round, bool IsAntialias = true)
         {
@@ -103,7 +111,7 @@ namespace SextantHelper
                 StrokeCap = cap,
                 IsAntialias = IsAntialias
             };
-        }
+        } //GetPaintColor
 
         private void canvas_PaintSurface(object sender, SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs e)
         {
@@ -119,6 +127,6 @@ namespace SextantHelper
                 timeTxt.Text = mUtcTime.ToUniversalTime().ToString("HH:mm:ss");
             }
 
-        }
+        } //canvas_PaintSurface
     }
 } //ns
