@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:sk="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="SextantHelper.PageSights">
+    
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="22">
+        
+        <sk:SKCanvasView x:Name="canvasView" PaintSurface="canvas_PaintSurface"/>
+
+        <Frame Grid.Row="0"  HasShadow="True" BorderColor="#D7DAE6" Padding="4" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Margin="20,20,20,20">
+
+            <ListView x:Name="lvSights" HorizontalOptions="FillAndExpand" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Label Grid.Column="0" Text="{Binding UTCTimeTaken}" FontSize="18" />
+                                <Label Grid.Column="1" Text="{Binding FormattedAngle}" FontSize="18" HorizontalTextAlignment="Center" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </Frame>
+
+        <StackLayout Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center">
+            <Label x:Name="lblAngle" FontSize="14" TextColor="#333436" HorizontalOptions="Center" VerticalOptions="Center">Celestial Shot List. Press SNAP to capture next sight.</Label>
+            <Label x:Name="lblUTC" FontSize="20" TextColor="#333436" HorizontalOptions="Center" VerticalOptions="Center">UTC Time:</Label>
+            <Label x:Name="timeTxt" TextColor="#333436" FontSize="70" FontFamily="LightFont" VerticalOptions="Center">Clock Holder</Label>
+            <Button x:Name="btnSnap" Text="Snap" BorderColor="DarkBlue" BorderWidth="1" WidthRequest="150" HeightRequest="150" CornerRadius="75" TextColor="#333436" FontSize="15" FontFamily="MediumFont" HorizontalOptions="Center"/>
+            
+        </StackLayout>
+
+    </Grid>
+</ContentPage>
