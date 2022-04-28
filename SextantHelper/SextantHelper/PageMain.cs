@@ -24,5 +24,5 @@ namespace SextantHelper
             }
             );
         } //ctor
-    } //class PageMain
+    } //class PageMain 
 }

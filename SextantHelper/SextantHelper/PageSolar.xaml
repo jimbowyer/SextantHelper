@@ -1,22 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SextantHelper"
              x:Class="SextantHelper.PageSolar">
     <ContentPage.Content>
         <StackLayout Margin="34">
             <Label x:Name="lblTimeZone" FontSize="15" TextColor="#333436"  HorizontalOptions="Center" VerticalOptions="Center">UTC</Label>
-            <Entry x:Name="txtLong" ReturnType="Go" FontSize="20" TextColor="#333436" WidthRequest="90" HorizontalOptions="Center" VerticalOptions="Center" Placeholder="longitude" Margin="1" MaxLength="10" BackgroundColor="LightBlue">
-                <Entry.Keyboard>
-                    <Keyboard x:FactoryMethod="Create">
-                        <x:Arguments>
-                            <KeyboardFlags>Suggestions</KeyboardFlags>
-                        </x:Arguments>
-                    </Keyboard>
-                </Entry.Keyboard>
-            </Entry>
+            <Entry x:Name="txtLong" ReturnType="Go" Keyboard="Numeric" FontSize="20" TextColor="#333436" WidthRequest="90" HorizontalOptions="Center" VerticalOptions="Center" Placeholder="longitude" Margin="1" MaxLength="10" BackgroundColor="LightBlue"/>
+
+
+
             <Label x:Name="txtSolar" FontSize="20" TextColor="#333436" Margin="8" HeightRequest="300" Text="Results here..." VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            
-            <Button x:Name="btnCalc" Text="Calc Noon Hour" IsEnabled="False"/>
+            <Button x:Name="btnCalc" Text="Calc Noon Hour"/>
             <Label x:Name="lblNotice" FontSize="12" TextColor="Maroon" Margin="5" HorizontalOptions="Center" VerticalOptions="Center">NB: Results depend on computer clock UTC offset - you may need to adjust if clock on wrong TZ for location.</Label>
 
         </StackLayout>

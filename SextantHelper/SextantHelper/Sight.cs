@@ -1,7 +1,10 @@
 ﻿using System;
 
 namespace SextantHelper
-{
+{ 
+    /// <summary>
+    /// Class object represents a given sight reading captured by sextant user.
+    /// </summary>
     public class Sight
     {
         private DateTime _taken;

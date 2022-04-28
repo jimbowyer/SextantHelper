@@ -1,10 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using Foundation;
+using Xamarin.Forms.Platform.iOS;
+using Xamarin.Forms;
 using UIKit;
+using SextantHelper.iOS;
 
+[assembly: ResolutionGroupName("RedlidConsulting")]
+[assembly: ExportRenderer(typeof(Entry), typeof(NumericKeyboardEntryRenderer))]
 namespace SextantHelper.iOS
 {
     public class Application
@@ -16,5 +17,22 @@ namespace SextantHelper.iOS
             // you can specify it here.
             UIApplication.Main(args, null, typeof(AppDelegate));
         }
+    } //class app
+
+    public class NumericKeyboardEntryRenderer : EntryRenderer
+    {
+        protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
+            {
+            base.OnElementChanged(e);
+
+            if (Control == null) return;
+
+            if (e.NewElement.Keyboard == Keyboard.Numeric)
+            {
+                Control.KeyboardType = UIKeyboardType.NumbersAndPunctuation;
+            }
+        }
     }
-}
+
+
+} //ns

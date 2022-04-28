@@ -28,13 +28,13 @@ namespace SextantHelper
                 if (Int32.TryParse(txtLong.Text, out iGood) && (iGood > -181) && (iGood<181))
                 {
                     txtLong.Text = iGood.ToString() + "°";
-                    btnCalc.IsEnabled = true;
+                    
                 }
                 else
                 {
                     await DisplayAlert("Please re-enter Longitude", "Must be number from -180 to +180", "OK");
                     txtLong.Text = "";
-                    btnCalc.IsEnabled =false;
+                    
                 }
                 
             };
@@ -46,7 +46,26 @@ namespace SextantHelper
                 StringBuilder sbSolar = new StringBuilder();
                 SolarWorker solar = new SolarWorker();
                 Query myQ = new Query();
-                long lLong = Convert.ToInt64(txtLong.Text.Remove(txtLong.Text.Length -1, 1)); //remove °
+                string sHold;
+                long lLong;
+
+                if (txtLong.Text == null)
+                {
+                    await DisplayAlert("Please re-enter", "Must be valid long", "OK");
+                    return;
+                }
+
+                sHold = txtLong.Text;
+                if (sHold.Length >= 1 && sHold.Substring(sHold.Length - 1) == "°")
+                {
+                    sHold = txtLong.Text.Remove(txtLong.Text.Length - 1, 1);
+                }
+                if (!long.TryParse(sHold, out lLong)) 
+                {
+                    await DisplayAlert("Please re-enter", "Must be valid long", "OK");
+                    return;
+                }
+                //= Convert.ToInt64(txtLong.Text.Remove(txtLong.Text.Length -1, 1)); //remove °
                 myQ = new Query(DateTime.Now, lLong); //value from entry
 
                 //#1 get epoch days
@@ -81,7 +100,9 @@ namespace SextantHelper
 
         } //ctor
 
-       
-
     } //class PageSolar
+    public class MinusButtonEntryEffect : RoutingEffect
+    {
+        public MinusButtonEntryEffect() : base($"RedlidConsulting.{nameof(MinusButtonEntryEffect)}") { }
+    }
 } //ns

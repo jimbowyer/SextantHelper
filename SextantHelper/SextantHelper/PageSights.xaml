@@ -29,7 +29,7 @@
             <Label x:Name="lblAngle" FontSize="14" TextColor="#333436" HorizontalOptions="Center" VerticalOptions="Center">Celestial Shot List. Press SNAP to capture next sight.</Label>
             <Label x:Name="lblUTC" FontSize="20" TextColor="#333436" HorizontalOptions="Center" VerticalOptions="Center">UTC Time:</Label>
             <Label x:Name="timeTxt" TextColor="#333436" FontSize="70" FontFamily="LightFont" VerticalOptions="Center">Clock Holder</Label>
-            <Button x:Name="btnSnap" Text="Snap" BorderColor="DarkBlue" BorderWidth="1" WidthRequest="150" HeightRequest="150" CornerRadius="75" TextColor="#333436" FontSize="15" FontFamily="MediumFont" HorizontalOptions="Center"/>
+            <Button x:Name="btnSnap" Text="Snap" BackgroundColor="#D7DAE6" BorderColor="DarkBlue" BorderWidth="1" WidthRequest="150" HeightRequest="150" CornerRadius="75" TextColor="#333436" FontSize="15" FontFamily="MediumFont" HorizontalOptions="Center"/>
             
         </StackLayout>
 
