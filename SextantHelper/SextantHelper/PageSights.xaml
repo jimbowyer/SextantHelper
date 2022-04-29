@@ -4,7 +4,7 @@
             xmlns:sk="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              x:Class="SextantHelper.PageSights">
     
-    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="22">
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="15,25,15,15">
         <sk:SKCanvasView x:Name="canvasView" PaintSurface="canvas_PaintSurface"/>
         <Frame Grid.Row="0"  HasShadow="True" BorderColor="#D7DAE6" Padding="4" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Margin="20,20,20,20">
             <CollectionView x:Name="cvSights" SelectionMode="Single" VerticalOptions="Start">
@@ -13,10 +13,10 @@
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <SwipeView>
+                        <SwipeView x:Name="svSights">
                             <SwipeView.RightItems>
                                 <SwipeItems>
-                                    <SwipeItem Text="Delete"  BackgroundColor="LightPink" Invoked="OnDeleteRequest" />
+                                    <SwipeItem Text="Delete" BackgroundColor="LightPink" Invoked="OnDeleteRequest" />
                                 </SwipeItems>
                             </SwipeView.RightItems>
 

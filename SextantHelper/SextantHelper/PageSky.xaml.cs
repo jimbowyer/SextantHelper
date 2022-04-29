@@ -10,14 +10,14 @@ using Xamarin.Forms.Xaml;
 namespace SextantHelper
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PageSolar : ContentPage
+    public partial class PageSky : ContentPage
     {
-        public PageSolar()
+        public PageSky()
         {
             InitializeComponent();
 
             lblTimeZone.Text = ("Clock TZ : " + TimeZoneInfo.Local.DisplayName);
-            txtSolar.Text = "Today is: " + DateTime.Now.ToString("m") + ". Set Longitude value above to enable calc. ";
+            txtSolar.Text = "Today is: " + DateTime.Now.ToString("m") + ". Set approx Longitude value above to enable calc. ";
 
             txtLong.Completed += async (sender, args) =>
             {
@@ -70,11 +70,11 @@ namespace SextantHelper
 
                 //#1 get epoch days
                 double days = solar.epoch2kDay(myQ);
-                sbSolar.AppendLine("Epoch (days) = " + days.ToString());
+                //sbSolar.AppendLine("Epoch (days) = " + days.ToString());
 
                 //2 get Equation of Time
                 double eot = solar.EquationOfTime(days);
-                sbSolar.AppendLine("Eq of Time = " + eot.ToString());
+                //sbSolar.AppendLine("Eq of Time = " + eot.ToString());
 
                 //3 get offset
                 double offset = solar.longitudeOffset(eot, myQ.Longitude);
@@ -92,7 +92,11 @@ namespace SextantHelper
                 
                 TimeSpan clockoffset = TimeZoneInfo.Local.GetUtcOffset(DateTime.UtcNow);
                 sbSolar.AppendLine("   is : " + solarNoon + "hrs, (UTC " + clockoffset.ToString() + ")");
-     
+                sbSolar.AppendLine("~~~~~~~~~~~~");
+                //now get moon phase details
+                sbSolar.AppendLine(LunarWorker.CalculateMoonPhase(DateTime.Now.ToUniversalTime(), Earth.Hemispheres.Northern));
+
+
                 txtSolar.Text = sbSolar.ToString();
             }; //btnCalc
 
@@ -100,7 +104,7 @@ namespace SextantHelper
 
         } //ctor
 
-    } //class PageSolar
+    } //class PageSky
     public class MinusButtonEntryEffect : RoutingEffect
     {
         public MinusButtonEntryEffect() : base($"RedlidConsulting.{nameof(MinusButtonEntryEffect)}") { }

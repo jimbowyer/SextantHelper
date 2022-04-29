@@ -11,15 +11,15 @@ namespace SextantHelper
     {
         public PageMain()
         {
-            this.Children.Add(new PageSolar
+            this.Children.Add(new PageSky
             {
-                Title = "Sun Info",
+                Title = "Sky Info",
                 
             }
             );
             this.Children.Add(new PageSights
             {
-                Title = "Sights",
+                Title = "Sight Records",
 
             }
             );

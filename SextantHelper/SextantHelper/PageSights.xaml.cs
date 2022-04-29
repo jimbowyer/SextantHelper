@@ -97,7 +97,17 @@ namespace SextantHelper
             if (bDelete) 
             {
                 //delete item
-                await DisplayAlert("Deleted", "To implement", "OK");
+                await DisplayAlert("Deleted", "to implement", "OK");
+                // selectedSight = cvSights.SelectedItem; //null
+
+                //cvSights.RemoveLogicalChild((Element)cvSights.SelectedItem); 
+                //cast likely fail but selecteditem is NULL!!!
+                
+                mSightList.Remove(mSightList[0]);
+                //mSightList.Remove(e.);
+                //reset col view:
+                cvSights.ItemsSource = null;
+                cvSights.ItemsSource = mSightList;
             }
         }
 
