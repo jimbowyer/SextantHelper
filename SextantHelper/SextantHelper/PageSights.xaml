@@ -7,7 +7,7 @@
     <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="15,25,15,15">
         <sk:SKCanvasView x:Name="canvasView" PaintSurface="canvas_PaintSurface"/>
         <Frame Grid.Row="0"  HasShadow="True" BorderColor="#D7DAE6" Padding="4" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Margin="20,20,20,20">
-            <CollectionView x:Name="cvSights" SelectionMode="Single" VerticalOptions="Start">
+            <CollectionView x:Name="cvSights" ItemsSource=" {Binding MySights}"  SelectionMode="Single" VerticalOptions="Start">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Orientation="Vertical" Span="1" VerticalItemSpacing="5" />
                 </CollectionView.ItemsLayout>
@@ -16,13 +16,18 @@
                         <SwipeView x:Name="svSights">
                             <SwipeView.RightItems>
                                 <SwipeItems>
-                                    <SwipeItem Text="Delete" BackgroundColor="LightPink" Invoked="OnDeleteRequest" />
+                                    <SwipeItem Text="Delete" BackgroundColor="LightPink" Command="{Binding Path=BindingContext.DeleteCommand, Source={Reference cvSights}}" CommandParameter="{Binding .}" />
                                 </SwipeItems>
                             </SwipeView.RightItems>
+                            <SwipeView.LeftItems>
+                                <SwipeItems>
+                                    <SwipeItem Text="Noon Pos" BackgroundColor="LightGreen" Command="{Binding Path=BindingContext.CalcNoonCommand, Source={Reference cvSights}}" CommandParameter="{Binding .}" />
+                                </SwipeItems>
+                            </SwipeView.LeftItems>
 
                             <Grid HeightRequest="60" WidthRequest="300" BackgroundColor="#D7DAE6">
                                 <!--Label Text="{Binding UTCTimeTaken}" HorizontalOptions="Center" VerticalOptions="Center" /-->
-                                <Label Grid.Column="0" Text="{Binding UTCTimeTaken} " FontSize="18"  />
+                                <Label Grid.Column="0" Text="{Binding UTCTimeTaken}" FontSize="18"  />
                                 <Label Grid.Column="1" Text="{Binding FormattedAngle}" FontSize="18" HorizontalTextAlignment="Center" />
                             </Grid>
 
@@ -35,7 +40,7 @@
             <Label x:Name="lblAngle" FontSize="14" TextColor="#333436" HorizontalOptions="Center" VerticalOptions="Center">Celestial Shot List. Press SNAP to capture next sight.</Label>
             <Label x:Name="lblUTC" FontSize="20" TextColor="#333436" HorizontalOptions="Center" VerticalOptions="Center">UTC Time:</Label>
             <Label x:Name="timeTxt" TextColor="#333436" FontSize="70" FontFamily="LightFont" HorizontalOptions="Center" VerticalOptions="Center">Clock Holder</Label>
-            <Button x:Name="btnSnap" Text="Snap" BackgroundColor="#D7DAE6" BorderColor="DarkBlue" BorderWidth="1" WidthRequest="150" HeightRequest="150" CornerRadius="75" TextColor="#333436" FontSize="15" FontFamily="MediumFont" HorizontalOptions="Center"/>
+            <Button x:Name="btnSnap" Text="Snap" Command="{Binding AddCommand}" BackgroundColor="#D7DAE6" BorderColor="DarkBlue" BorderWidth="1" WidthRequest="150" HeightRequest="150" CornerRadius="75" TextColor="#333436" FontSize="15" FontFamily="MediumFont" HorizontalOptions="Center"/>
         </StackLayout>
 
     </Grid>

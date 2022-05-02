@@ -11,6 +11,8 @@ namespace SextantHelper
         private int _degrees;
         private decimal _minutes;
         
+        public Sight()
+        { }// empty ctor
 
         public Sight ( DateTime taken, int degrees, decimal minutes)
         {

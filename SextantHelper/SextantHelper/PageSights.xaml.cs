@@ -2,9 +2,13 @@
 using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+using SextantHelper.Models;
+using System.Collections.ObjectModel;
 
 namespace SextantHelper
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PageSights : ContentPage
     {
         private DateTime mUtcTime = DateTime.Now;
@@ -14,9 +18,7 @@ namespace SextantHelper
         public PageSights()
         {
             InitializeComponent();
-            cvSights.ItemsSource = new List<Sight>();
-            cvSights.ItemsSource = mSightList;
-
+            BindingContext = new PageSightModel();
 
             Device.StartTimer(TimeSpan.FromSeconds(1 / 60f), () =>
             {
@@ -27,89 +29,12 @@ namespace SextantHelper
 
             btnSnap.Clicked += async (sender, args) =>
             {
-                //open readings pop up:
-                string sDegrees = "";
-                string sMinutes = "";
-                bool bValidDeg = false;
-                bool bValidMin = false;
-                Sight newSight = null;
-                int iDegrees;
-                decimal dMinutes;
-                mbSnapping = true;
-                string sTime = mUtcTime.ToUniversalTime().ToString("HH:mm:ss");
-
-                while (!bValidDeg)
-                {
-                    sDegrees = await DisplayPromptAsync("Degrees", "Enter Degrees ", "OK", "Cancel", null, 8,
-                                        keyboard: Keyboard.Numeric, "");
-                    bValidDeg = int.TryParse(sDegrees, out iDegrees);
-                    if (bValidDeg)
-                    {
-                        bValidDeg = (iDegrees < 360);
-                        if (!bValidDeg)
-                        {
-                            await DisplayAlert("Please re-enter", "Must be <360", "OK");
-                            sDegrees = await DisplayPromptAsync("Must be int & <360...", "Enter Degrees ", "OK", "Cancel", null, 8,
-                                        keyboard: Keyboard.Numeric, "");
-                        }
-                    }
-                    else
-                    {
-                        await DisplayAlert("Please re-enter", "Must be int", "OK");
-                        sDegrees = await DisplayPromptAsync("Must be int & <360...", "Enter Degrees ", "OK", "Cancel", null, 8,
-                                        keyboard: Keyboard.Numeric, "");
-                    };
-                    if (bValidDeg)
-                    {
-                        //valid degree reading so store and ask user for minutes
-                        while (!bValidMin)
-                        {
-                            iDegrees = int.Parse(sDegrees);
-                            sMinutes = await DisplayPromptAsync("Minutes", "Enter Minutes (inc decimal)", "OK", "Cancel", null, 8,
-                                                keyboard: Keyboard.Numeric, "");
-                            bValidMin = decimal.TryParse(sMinutes, out dMinutes);
-                            if (bValidMin)
-                            {
-                                newSight = new Sight(mUtcTime, iDegrees, dMinutes);
-                                mSightList.Add(newSight);                    
-                            }
-                        } //while min
-                    }
-                } //while deg
-
-                //reset collection view. *TO DO*... persist state between app starts
-                if (newSight != null)
-                {
-                    cvSights.ItemsSource = null;
-                    cvSights.ItemsSource = mSightList;  
-                    
-                }
-
-                mbSnapping = false; //allow clock refresh again
-
+                
             }; //btnSnap
 
         } //ctor
 
-        async void OnDeleteRequest(object sender, EventArgs e)
-        {
-            bool bDelete =  await DisplayAlert("Delete?", "Delete sight record?", "OK", "Cancel");
-            if (bDelete) 
-            {
-                //delete item
-                await DisplayAlert("Deleted", "to implement", "OK");
-                // selectedSight = cvSights.SelectedItem; //null
-
-                //cvSights.RemoveLogicalChild((Element)cvSights.SelectedItem); 
-                //cast likely fail but selecteditem is NULL!!!
-                
-                mSightList.Remove(mSightList[0]);
-                //mSightList.Remove(e.);
-                //reset col view:
-                cvSights.ItemsSource = null;
-                cvSights.ItemsSource = mSightList;
-            }
-        }
+        
 
         private SKPaint GetPaintColor(SKPaintStyle style, string hexColor, float strokeWidth = 0, SKStrokeCap cap = SKStrokeCap.Round, bool IsAntialias = true)
         {
