@@ -5,6 +5,7 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -14,13 +15,13 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>8.0</string>
+	<string>11.0</string>
 	<key>CFBundleDisplayName</key>
 	<string>SextantHelper</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.redlidconsulting.SextantHelper</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.0.0.1</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
@@ -29,5 +30,7 @@
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>UIMainStoryboardFile</key>
 	<string>LaunchScreen</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0.1</string>
 </dict>
 </plist>

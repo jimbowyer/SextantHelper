@@ -43,7 +43,7 @@ namespace SextantHelper.Models
                 string sLongMinutes;
                 string sLatDegrees;
                 string sLatMinutes;
-                string sLat;
+                
                 StringBuilder sbResult =  new StringBuilder();
 
                 sDecDegrees = await DisplayPromptAsync("Declination Degrees", "Enter Degree part for current declination ", "OK", "Cancel", null, 8,
@@ -53,6 +53,9 @@ namespace SextantHelper.Models
 
                 bValidDeclination = int.TryParse(sDecDegrees, out iDecDegrees);
                 bValidDeclination = decimal.TryParse(sDecMinutes, out dDecMinutes);
+                
+                if (iDecDegrees < -90 || iDecDegrees >90 ) { bValidDeclination = false; };
+                if (dDecMinutes < 0) { bValidDeclination = false; };
 
                 if (!bValidDeclination)
                 {
@@ -64,6 +67,7 @@ namespace SextantHelper.Models
                 //#1 CALC LATITUDE (90° - sight + declination):
                 sLatDegrees = (89 - iSightDegrees + iDecDegrees).ToString();
                 sLatMinutes = (60 - dSightMinutes + dDecMinutes).ToString();
+
                 //#2 CALC LONGITUDE( [utc - 12hr] x 15):
                 DateTime dteTmp;
                 dteTmp = model.TimeTaken.AddHours(-12);
@@ -137,7 +141,7 @@ namespace SextantHelper.Models
                     }
                     else
                     {
-                        DisplayAlert("Please re-enter", "Must be int", "OK");
+                        DisplayAlert("Please re-enter", "Must be integer", "OK");
                         sDegrees = await DisplayPromptAsync("Must be int & <360...", "Enter Degrees ", "OK", "Cancel", null, 8,
                                         kb: Keyboard.Numeric, "");
                     };
@@ -187,8 +191,6 @@ namespace SextantHelper.Models
         {
              return await Application.Current.MainPage.DisplayAlert(v1, v2, v3, v4);
         }
-
-
 
     } //class PageReproModel
 }//ns
