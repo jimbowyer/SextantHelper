@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 
 namespace SextantHelper
@@ -22,7 +23,6 @@ namespace SextantHelper
         {
             const int noonMinutes = 12 * 60;
             return minutesToClock(noonMinutes + longitudeOffset);
-
         }
 
         private double getOffsetMinutes()
@@ -68,6 +68,62 @@ namespace SextantHelper
 
             return queryDate.Subtract(epochYear).TotalMilliseconds / oneDay; //simplify if always noon?           
         }
+
+        public string GetNoonPosition(int iSightDegrees,decimal dSightMinutes, int iDecDegrees, decimal dDecMinutes, DateTime TimeTaken)
+        {
+            StringBuilder sbResult = new StringBuilder();
+            string sLatDegrees;
+            string sLatMinutes;
+            string sLongDegrees;
+            string sLongMinutes;
+
+            try
+            {
+                //Do Noon Position math:
+                //#1 CALC LATITUDE (90° - sight + declination):
+                sLatDegrees = (89 - iSightDegrees + iDecDegrees).ToString();
+                sLatMinutes = (60 - dSightMinutes + dDecMinutes).ToString();
+
+                //#2 CALC LONGITUDE( [utc - 12hr] x 15):
+                DateTime dteTmp;
+                //dteTmp = model.TimeTaken.AddHours(-12);
+                dteTmp = TimeTaken.AddHours(-12);
+                int iTmp = 15 * dteTmp.ToUniversalTime().Hour;
+                double dLong = 0.25 * dteTmp.ToUniversalTime().Minute;
+                dLong = iTmp + dLong;
+                //convert decimal part to minutes
+                sLongDegrees = dLong.ToString("0.00");
+                sLongDegrees = sLongDegrees.Substring(0, sLongDegrees.IndexOf("."));
+                sLongMinutes = dLong.ToString("0.00");
+                sLongMinutes = sLongMinutes.Substring(sLongMinutes.IndexOf("."), sLongMinutes.Length - sLongMinutes.IndexOf("."));
+                sLongMinutes = "0" + sLongMinutes;
+                sLongMinutes = (Convert.ToDouble(sLongMinutes) * 60).ToString();
+
+                //#3 FORMAT RESULT STRING:
+                sbResult.Append("Latitude: " + sLatDegrees + "° ");
+                sbResult.Append(sLatMinutes + "'");
+                if (Convert.ToInt32(sLatDegrees) > 0)
+                {
+                    sbResult.AppendLine("N");
+                }
+                else sbResult.AppendLine("S");
+                sbResult.Append("Longitude: " + sLongDegrees + "° ");
+                sbResult.Append(sLongMinutes + "'");
+                if (dLong > 0)
+                {
+                    sbResult.AppendLine("W");
+                }
+                else sbResult.AppendLine("E");
+
+                return sbResult.ToString();
+
+            }
+            catch (Exception ex)
+            {
+                return ("Unexpected error calculating noon position: " + ex.ToString());
+            }
+
+        } // GetNoonPosition
 
     } // class solarnoon
 
