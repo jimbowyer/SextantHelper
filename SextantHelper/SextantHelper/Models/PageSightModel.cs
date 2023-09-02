@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -39,6 +38,7 @@ namespace SextantHelper.Models
                 string sDecDegrees;
                 string sDecMinutes;
                 bool bValidDeclination;
+
                 string sLongDegrees;
                 string sLongMinutes;
                 string sLatDegrees;
@@ -50,12 +50,20 @@ namespace SextantHelper.Models
                 if (!bConfirmed) { return; }
 
                 sDecDegrees = await DisplayPromptAsync("Declination Degrees", "Enter Degree part for current declination ", "OK", "Cancel", null, 8,
+
+                string sResult = new string("");
+
+                //Get user input for declination values:
+                sDecDegrees = await DisplayPromptAsync("Declination Degrees", "Enter Degree part for current declination value ", "OK", "Cancel", null, 8,
                                         kb: Keyboard.Numeric, "");
                 sDecMinutes = await DisplayPromptAsync("Declination Minutes", "Enter Minute part for current declination inc decimal ", "OK", "Cancel", null, 8,
                                         kb: Keyboard.Numeric, "");
 
                 bValidDeclination = int.TryParse(sDecDegrees, out iDecDegrees);
                 bValidDeclination = decimal.TryParse(sDecMinutes, out dDecMinutes);
+                
+                if (iDecDegrees < -90 || iDecDegrees >90 ) { bValidDeclination = false; };
+                if (dDecMinutes < 0) { bValidDeclination = false; };
 
                 if (!bValidDeclination)
                 {
@@ -63,40 +71,10 @@ namespace SextantHelper.Models
                     return;
                 }
 
-                //Do Noon Position math:
-                //#1 CALC LATITUDE (90° - sight + declination):
-                sLatDegrees = (89 - iSightDegrees + iDecDegrees).ToString();
-                sLatMinutes = (60 - dSightMinutes + dDecMinutes).ToString();
-                //#2 CALC LONGITUDE( [utc - 12hr] x 15):
-                DateTime dteTmp;
-                dteTmp = model.TimeTaken.AddHours(-12);
-                int iTmp = 15 * dteTmp.ToUniversalTime().Hour;
-                double dLong = 0.25 * dteTmp.ToUniversalTime().Minute;
-                dLong = iTmp + dLong; 
-                //convert decimal part to minutes
-                sLongDegrees = dLong.ToString();
-                sLongDegrees = sLongDegrees.Substring(0, sLongDegrees.IndexOf("."));
-                sLongMinutes = dLong.ToString();
-                sLongMinutes = sLongMinutes.Substring(sLongMinutes.IndexOf("."), sLongMinutes.Length - sLongMinutes.IndexOf("."));
-                sLongMinutes = "0" + sLongMinutes;
-                sLongMinutes = (Convert.ToDouble(sLongMinutes) * 60).ToString();
-                
-                //#3 FORMAT & DISPLAY Result
-                sbResult.Append ("Latitude: " + sLatDegrees + "° ");
-                sbResult.Append(sLatMinutes + "'");
-                if (Convert.ToInt32(sLatDegrees) >0)
-                {
-                    sbResult.AppendLine("N");
-                }
-                else sbResult.AppendLine("S");
-                sbResult.Append("Longitude: " + sLongDegrees + "° ");
-                sbResult.Append(sLongMinutes + "'");
-                if (dLong > 0)
-                {
-                    sbResult.AppendLine("W");
-                }
-                else sbResult.AppendLine("E");
-                DisplayAlert("Calculated Noon Position", sbResult.ToString(), "OK");
+                //get formatted result for a calculated noon position using sight readings:
+                SolarWorker objSun = new SolarWorker();
+                sResult = objSun.GetNoonPosition(iSightDegrees, dSightMinutes, iDecDegrees, dDecMinutes, model.TimeTaken);
+                DisplayAlert("Calculated Noon Position", sResult.ToString(), "OK");
 
             });
 
@@ -116,6 +94,7 @@ namespace SextantHelper.Models
                 int iDegrees;
                 decimal dMinutes;
                 DateTime dteTime = DateTime.Now; // ToUniversalTime().ToString("HH:mm:ss");
+                SolarWorker objSun;
 
                 while (!bValidDeg)
                 {
@@ -134,7 +113,7 @@ namespace SextantHelper.Models
                     }
                     else
                     {
-                        DisplayAlert("Please re-enter", "Must be int", "OK");
+                        DisplayAlert("Please re-enter", "Must be integer", "OK");
                         sDegrees = await DisplayPromptAsync("Must be int & <360...", "Enter Degrees ", "OK", "Cancel", null, 8,
                                         kb: Keyboard.Numeric, "");
                     };
@@ -191,8 +170,6 @@ namespace SextantHelper.Models
         {
              return await Application.Current.MainPage.DisplayAlert(v1, v2, v3, v4);
         }
-
-
 
     } //class PageReproModel
 }//ns

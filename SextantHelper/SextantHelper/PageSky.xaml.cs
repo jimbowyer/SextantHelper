@@ -22,10 +22,8 @@ namespace SextantHelper
 
             txtLong.Completed += async (sender, args) =>
             {
-                //if (txtLong.Text)
-                //bool bGood;
                 int iGood;
-                //Int32.TryParse(txtLong.Text, out iGood);
+
                 if (Int32.TryParse(txtLong.Text, out iGood) && (iGood > -181) && (iGood<181))
                 {
                     txtLong.Text = iGood.ToString() + "°";
@@ -34,6 +32,7 @@ namespace SextantHelper
                 else
                 {
                     await DisplayAlert("Please re-enter Longitude", "Must be number from -180 to +180", "OK");
+
                     txtLong.Text = "";
                     
                 }           
@@ -46,6 +45,18 @@ namespace SextantHelper
                 if (sHemiAsk == "Southern") h = Hemispheres.Southern; else h = Hemispheres.Northern;
 
                 txtSolar.Text = DateTime.Now.ToString();   
+
+                    txtLong.Text = "";                  
+                }
+                
+            };
+
+            btnCalc.Clicked += async (sender, args) =>
+            {
+                Earth.Hemispheres hType = Earth.Hemispheres.Northern;
+                txtSolar.Text = DateTime.Now.ToString();
+                //
+
                 StringBuilder sbSolar = new StringBuilder();
                 SolarWorker solar = new SolarWorker();
                 Query myQ = new Query();
@@ -97,7 +108,20 @@ namespace SextantHelper
                 sbSolar.AppendLine("   is : " + solarNoon + "hrs, (UTC " + clockoffset.ToString() + ")");
                 sbSolar.AppendLine("~~~~~~~~~~~~");
                 //now get moon phase details
+
                 sbSolar.AppendLine(LunarWorker.CalculateMoonPhase(DateTime.Now.ToUniversalTime(), h));
+
+                if (rdoSouthHemi.IsChecked)
+                {
+                    hType = Earth.Hemispheres.Southern;
+                }
+                else 
+                { 
+                    hType = Earth.Hemispheres.Northern; //default 
+                };
+                sbSolar.AppendLine(LunarWorker.CalculateMoonPhase(DateTime.Now.ToUniversalTime(), hType));
+
+
 
                 txtSolar.Text = sbSolar.ToString();
             }; //btnCalc

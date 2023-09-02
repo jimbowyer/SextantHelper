@@ -7,6 +7,7 @@ namespace SextantHelper
     {
         public PageMain()
         {
+
             this.Children.Add(new PageSky
             {
                 Title = "Sky Info",
@@ -22,6 +23,11 @@ namespace SextantHelper
                 Title = "Aide Memoir"
             }
             );
+
+            this.Children.Add(new PageAbout
+            {
+                Title = "About",
+            });
            
         } //ctor
     } //class PageMain 

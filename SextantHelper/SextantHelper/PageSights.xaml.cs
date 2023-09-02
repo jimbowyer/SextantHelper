@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using SextantHelper.Models;
-using System.Collections.ObjectModel;
 
 namespace SextantHelper
 {
@@ -50,18 +49,15 @@ namespace SextantHelper
 
         private void canvas_PaintSurface(object sender, SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs e)
         {
-            if (!mbSnapping) //skip if we are reading sight
-            {
-                //force repaint
-                SKSurface surface = e.Surface;
-                SKCanvas canvas = surface.Canvas;
-                canvas.Clear();
+            //force repaint
+            SKSurface surface = e.Surface;
+            SKCanvas canvas = surface.Canvas;
+            canvas.Clear();
 
-                //Update UTC clock
-                mUtcTime = DateTime.Now;
-                timeTxt.Text = mUtcTime.ToUniversalTime().ToString("HH:mm:ss");
-            }
-
+            //Update UTC clock
+            mUtcTime = DateTime.Now;
+            timeTxt.Text = mUtcTime.ToUniversalTime().ToString("HH:mm:ss");
+            
         } //canvas_PaintSurface
     }
 } //ns
