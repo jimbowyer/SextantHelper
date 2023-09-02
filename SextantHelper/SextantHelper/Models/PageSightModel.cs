@@ -43,8 +43,11 @@ namespace SextantHelper.Models
                 string sLongMinutes;
                 string sLatDegrees;
                 string sLatMinutes;
-                string sLat;
+                bool bConfirmed;
                 StringBuilder sbResult =  new StringBuilder();
+
+                bConfirmed = await DisplayConfirmation("Calculate noon position for selected sight?");
+                if (!bConfirmed) { return; }
 
                 sDecDegrees = await DisplayPromptAsync("Declination Degrees", "Enter Degree part for current declination ", "OK", "Cancel", null, 8,
                                         kb: Keyboard.Numeric, "");
@@ -97,15 +100,9 @@ namespace SextantHelper.Models
 
             });
 
-            DeleteCommand = new Command<Sight>(async model =>
+            DeleteCommand = new Command<Sight>(model =>
             {
-                //TO DO- fix logic to handle cancel
-                //bool bResult = false;
-                //bResult = await CancelAlert("Delete this?", model.UTCTimeTaken.ToString(), "OK", "Cancel"));
-                //bResult = await CancelAlert("Delete this?", "sure?", "OK", "Cancel"));
-                //if (bResult) MySights.Remove(model);
-
-                MySights.Remove(model);
+                MySights.Remove(model);   
             });
 
             AddCommand = new Command<Sight>(async model =>
@@ -181,6 +178,13 @@ namespace SextantHelper.Models
         private void DisplayAlert(string v1, string v2, string v3)
         {
              Application.Current.MainPage.DisplayAlert(v1, v2, v3);
+        }
+
+        private async Task<bool> DisplayConfirmation(string sQuestion)
+        {
+            string sResult;
+            sResult = await Application.Current.MainPage.DisplayActionSheet(sQuestion, "Cancel", "Yes");
+            if (sResult != "Yes") return false; else return true;       
         }
 
         private async Task<bool> CancelAlert(string v1, string v2, string v3, string v4)

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using static SextantHelper.Earth;
 
 namespace SextantHelper
 {
@@ -35,14 +36,16 @@ namespace SextantHelper
                     await DisplayAlert("Please re-enter Longitude", "Must be number from -180 to +180", "OK");
                     txtLong.Text = "";
                     
-                }
-                
+                }           
             };
 
-               btnCalc.Clicked += async (sender, args) =>
+            btnCalcSky.Clicked += async (sender, args) =>
             {
-                txtSolar.Text = DateTime.Now.ToString();
-                //
+                Hemispheres h;
+                string sHemiAsk = await Application.Current.MainPage.DisplayActionSheet("Which hemisphere? N/S?", "Northern", "Southern");
+                if (sHemiAsk == "Southern") h = Hemispheres.Southern; else h = Hemispheres.Northern;
+
+                txtSolar.Text = DateTime.Now.ToString();   
                 StringBuilder sbSolar = new StringBuilder();
                 SolarWorker solar = new SolarWorker();
                 Query myQ = new Query();
@@ -94,8 +97,7 @@ namespace SextantHelper
                 sbSolar.AppendLine("   is : " + solarNoon + "hrs, (UTC " + clockoffset.ToString() + ")");
                 sbSolar.AppendLine("~~~~~~~~~~~~");
                 //now get moon phase details
-                sbSolar.AppendLine(LunarWorker.CalculateMoonPhase(DateTime.Now.ToUniversalTime(), Earth.Hemispheres.Northern));
-
+                sbSolar.AppendLine(LunarWorker.CalculateMoonPhase(DateTime.Now.ToUniversalTime(), h));
 
                 txtSolar.Text = sbSolar.ToString();
             }; //btnCalc

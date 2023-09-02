@@ -21,7 +21,7 @@
                             </SwipeView.RightItems>
                             <SwipeView.LeftItems>
                                 <SwipeItems>
-                                    <SwipeItem Text="Noon Pos" BackgroundColor="LightGreen" Command="{Binding Path=BindingContext.CalcNoonCommand, Source={Reference cvSights}}" CommandParameter="{Binding .}" />
+                                    <SwipeItem Text="Calc Noon" BackgroundColor="LightGreen" Command="{Binding Path=BindingContext.CalcNoonCommand, Source={Reference cvSights}}" CommandParameter="{Binding .}" />
                                 </SwipeItems>
                             </SwipeView.LeftItems>
 
