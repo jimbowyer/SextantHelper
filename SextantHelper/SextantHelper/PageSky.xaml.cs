@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using static SextantHelper.Earth;
 
 namespace SextantHelper
 {
@@ -31,6 +32,20 @@ namespace SextantHelper
                 else
                 {
                     await DisplayAlert("Please re-enter Longitude", "Must be number from -180 to +180", "OK");
+
+                    txtLong.Text = "";
+                    
+                }           
+            };
+
+            btnCalcSky.Clicked += async (sender, args) =>
+            {
+                Hemispheres h;
+                string sHemiAsk = await Application.Current.MainPage.DisplayActionSheet("Which hemisphere? N/S?", "Northern", "Southern");
+                if (sHemiAsk == "Southern") h = Hemispheres.Southern; else h = Hemispheres.Northern;
+
+                txtSolar.Text = DateTime.Now.ToString();   
+
                     txtLong.Text = "";                  
                 }
                 
@@ -41,6 +56,7 @@ namespace SextantHelper
                 Earth.Hemispheres hType = Earth.Hemispheres.Northern;
                 txtSolar.Text = DateTime.Now.ToString();
                 //
+
                 StringBuilder sbSolar = new StringBuilder();
                 SolarWorker solar = new SolarWorker();
                 Query myQ = new Query();
@@ -92,6 +108,9 @@ namespace SextantHelper
                 sbSolar.AppendLine("   is : " + solarNoon + "hrs, (UTC " + clockoffset.ToString() + ")");
                 sbSolar.AppendLine("~~~~~~~~~~~~");
                 //now get moon phase details
+
+                sbSolar.AppendLine(LunarWorker.CalculateMoonPhase(DateTime.Now.ToUniversalTime(), h));
+
                 if (rdoSouthHemi.IsChecked)
                 {
                     hType = Earth.Hemispheres.Southern;
@@ -101,6 +120,7 @@ namespace SextantHelper
                     hType = Earth.Hemispheres.Northern; //default 
                 };
                 sbSolar.AppendLine(LunarWorker.CalculateMoonPhase(DateTime.Now.ToUniversalTime(), hType));
+
 
 
                 txtSolar.Text = sbSolar.ToString();
