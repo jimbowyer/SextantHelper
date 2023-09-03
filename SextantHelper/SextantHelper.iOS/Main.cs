@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using UIKit;
 using SextantHelper.iOS;
+using System.Runtime.CompilerServices;
 
 [assembly: ResolutionGroupName("RedlidConsulting")]
 [assembly: ExportRenderer(typeof(Entry), typeof(NumericKeyboardEntryRenderer))]
@@ -15,6 +16,7 @@ namespace SextantHelper.iOS
             // if you want to use a different Application Delegate class from "AppDelegate"
             // you can specify it here.
             UIApplication.Main(args, null, typeof(AppDelegate));
+            
         }
     } //class app
 
