@@ -1,5 +1,4 @@
-﻿
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace SextantHelper
 {
@@ -7,7 +6,6 @@ namespace SextantHelper
     {
         public PageMain()
         {
-
             this.Children.Add(new PageSky
             {
                 Title = "Sky Info",
@@ -26,9 +24,10 @@ namespace SextantHelper
 
             this.Children.Add(new PageAbout
             {
-                Title = "About",
+                Title = "About"
             });
-           
+
+
         } //ctor
     } //class PageMain 
 }

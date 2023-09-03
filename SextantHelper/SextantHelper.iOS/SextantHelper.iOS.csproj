@@ -38,6 +38,8 @@
     <WarningLevel>4</WarningLevel>
     <MtouchLink>None</MtouchLink>
     <MtouchArch>x86_64</MtouchArch>
+    <CodesignKey>Apple Development: Created via API (95GXNQBYD4)</CodesignKey>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -135,7 +137,6 @@
       <Version>2.88.5</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2612" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.8.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SextantHelper\SextantHelper.csproj">
@@ -144,7 +145,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\sextant_about.png" />
+    <BundleResource Include="Resources\about.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
