@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "c+tXOQ4EMP78osD7Qqt1SHaWZ+Td1wmu6cpdEw6OXHX99mLdyHb+0ft/gaWgunOaaqjjwrsdra/pAuShq3mDWA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\JBAdmin\\source\\repos\\SextantHelper\\SextantHelper\\SextantHelper.iOS\\SextantHelper.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\JBAdmin\\.nuget\\packages\\skiasharp\\2.88.5\\skiasharp.2.88.5.nupkg.sha512",
+    "C:\\Users\\JBAdmin\\.nuget\\packages\\skiasharp.nativeassets.ios\\2.88.5\\skiasharp.nativeassets.ios.2.88.5.nupkg.sha512",
+    "C:\\Users\\JBAdmin\\.nuget\\packages\\skiasharp.views\\2.88.5\\skiasharp.views.2.88.5.nupkg.sha512",
+    "C:\\Users\\JBAdmin\\.nuget\\packages\\skiasharp.views.forms\\2.88.5\\skiasharp.views.forms.2.88.5.nupkg.sha512",
+    "C:\\Users\\JBAdmin\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\JBAdmin\\.nuget\\packages\\xamarin.essentials\\1.8.0\\xamarin.essentials.1.8.0.nupkg.sha512",
+    "C:\\Users\\JBAdmin\\.nuget\\packages\\xamarin.forms\\5.0.0.2612\\xamarin.forms.5.0.0.2612.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_CodesignBundle Include="SextantHelper.iOS.app">
+      <CodesignSigningKey>31451D596F1F935117ACDD274C9F901A0D0A2CEE</CodesignSigningKey>
+      <CodesignEntitlements>\Users\jbadmin\Library\Caches\Xamarin\mtbs\builds\SextantHelper.iOS\b3e5aaf3ca9543d6c2a2ffadd726c86328e70156f7477e957d153d2b884c9ec2\obj\iPhone\Release\Entitlements.xcent</CodesignEntitlements>
+      <CodesignUseSecureTimestamp></CodesignUseSecureTimestamp>
+      <CodesignAllocate>\Applications\Xcode.app\Contents\Developer\Toolchains\XcodeDefault.xctoolchain\usr\bin\codesign_allocate</CodesignAllocate>
+      <RequireCodeSigning>true</RequireCodeSigning>
+      <CodesignExtraArgs></CodesignExtraArgs>
+      <CodesignResourceRules></CodesignResourceRules>
+      <CodesignDisableTimestamp>false</CodesignDisableTimestamp>
+      <CodesignKeychain></CodesignKeychain>
+      <CodesignUseHardenedRuntime></CodesignUseHardenedRuntime>
+      <SourceProjectPath>C:\Users\JBAdmin\SextantHelper\SextantHelper\SextantHelper.iOS</SourceProjectPath>
+    </_CodesignBundle>
+  </ItemGroup>
+</Project>

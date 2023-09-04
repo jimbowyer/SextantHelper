@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_PostProcessingItem Include="SextantHelper.iOS.app/SextantHelper.iOS">
+      <BCSymbolMapName>SextantHelper.iOS.bcsymbolmap</BCSymbolMapName>
+      <NoDSymUtil>false</NoDSymUtil>
+      <dSYMSourcePathExists>false</dSYMSourcePathExists>
+      <NoSymbolStrip>false</NoSymbolStrip>
+      <dSYMInfoPlistRelativePath>SextantHelper.iOS.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
+      <SymbolFile>\Users\jbadmin\Library\Caches\Xamarin\mtbs\builds\SextantHelper.iOS\b3e5aaf3ca9543d6c2a2ffadd726c86328e70156f7477e957d153d2b884c9ec2\obj\iPhone\Release\mtouch-symbols.list</SymbolFile>
+      <DSymName>SextantHelper.iOS.app.dSYM</DSymName>
+      <SourceProjectPath>C:\Users\JBAdmin\SextantHelper\SextantHelper\SextantHelper.iOS</SourceProjectPath>
+    </_PostProcessingItem>
+  </ItemGroup>
+</Project>
