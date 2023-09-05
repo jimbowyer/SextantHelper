@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "gHHea5l8AP8r+dgtDI0D8jTRrvCtwyzW5kUg4577wspGlJb/deRpBtGnajxzyMDeM+9JboGC8Ax4uldP4W3qzQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj",
+  "expectedPackageFiles": [
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\JBAdmin\\.nuget\\packages\\skiasharp\\2.88.5\\skiasharp.2.88.5.nupkg.sha512",
+    "C:\\Users\\JBAdmin\\.nuget\\packages\\skiasharp.nativeassets.macos\\2.88.5\\skiasharp.nativeassets.macos.2.88.5.nupkg.sha512",
+    "C:\\Users\\JBAdmin\\.nuget\\packages\\skiasharp.nativeassets.win32\\2.88.5\\skiasharp.nativeassets.win32.2.88.5.nupkg.sha512",
+    "C:\\Users\\JBAdmin\\.nuget\\packages\\skiasharp.views.forms\\2.88.5\\skiasharp.views.forms.2.88.5.nupkg.sha512",
+    "C:\\Users\\JBAdmin\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\JBAdmin\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\JBAdmin\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\JBAdmin\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.3\\system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512",
+    "C:\\Users\\JBAdmin\\.nuget\\packages\\xamarin.essentials\\1.8.0\\xamarin.essentials.1.8.0.nupkg.sha512",
+    "C:\\Users\\JBAdmin\\.nuget\\packages\\xamarin.forms\\5.0.0.2612\\xamarin.forms.5.0.0.2612.nupkg.sha512"
+  ],
+  "logs": []
+}

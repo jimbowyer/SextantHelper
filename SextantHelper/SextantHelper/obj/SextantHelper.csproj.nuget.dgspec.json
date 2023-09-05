@@ -1,67 +1,9 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper.Android\\SextantHelper.Android.csproj": {}
+    "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper.Android\\SextantHelper.Android.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper.Android\\SextantHelper.Android.csproj",
-        "projectName": "SextantHelper.Android",
-        "projectPath": "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper.Android\\SextantHelper.Android.csproj",
-        "packagesPath": "C:\\Users\\JBAdmin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper.Android\\obj\\",
-        "projectStyle": "PackageReference",
-        "skipContentFileWrite": true,
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\JBAdmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "monoandroid13.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "monoandroid13.0": {
-            "projectReferences": {
-              "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj": {
-                "projectPath": "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj"
-              }
-            }
-          }
-        }
-      },
-      "frameworks": {
-        "monoandroid13.0": {
-          "dependencies": {
-            "SkiaSharp.Views.Forms": {
-              "target": "Package",
-              "version": "[2.88.5, )"
-            },
-            "Xamarin.AndroidX.Annotation": {
-              "target": "Package",
-              "version": "[1.6.0.4, )"
-            },
-            "Xamarin.Essentials": {
-              "target": "Package",
-              "version": "[1.8.0, )"
-            },
-            "Xamarin.Forms": {
-              "target": "Package",
-              "version": "[5.0.0.2612, )"
-            }
-          }
-        }
-      }
-    },
     "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj": {
       "version": "1.0.0",
       "restore": {
