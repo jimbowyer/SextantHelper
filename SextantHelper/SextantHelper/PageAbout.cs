@@ -43,6 +43,7 @@ namespace SextantHelper
                     },
                     new Label { Text = sVersion, TextColor= Color.Black, HorizontalTextAlignment= TextAlignment.Center},
                     new Label { Text = cSTR_ABOUT, TextColor= Color.Black, HorizontalTextAlignment= TextAlignment.Center},
+                    btnLink
                 }
             };
         } //ctor

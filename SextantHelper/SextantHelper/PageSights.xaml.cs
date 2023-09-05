@@ -10,8 +10,7 @@ namespace SextantHelper
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PageSights : ContentPage
     {
-        private DateTime mUtcTime = DateTime.Now;
-        private bool mbSnapping = false;
+        private DateTime mUtcTime = DateTime.Now;     
         private List<Sight> mSightList = new List<Sight>(); //sight list
 
         public PageSights()
