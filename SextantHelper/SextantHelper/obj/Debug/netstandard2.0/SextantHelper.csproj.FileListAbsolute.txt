@@ -1,0 +1,17 @@
+C:\Users\JBAdmin\Source\Repos\SextantHelper\SextantHelper\SextantHelper\bin\Debug\netstandard2.0\SextantHelper.deps.json
+C:\Users\JBAdmin\Source\Repos\SextantHelper\SextantHelper\SextantHelper\bin\Debug\netstandard2.0\SextantHelper.dll
+C:\Users\JBAdmin\Source\Repos\SextantHelper\SextantHelper\SextantHelper\bin\Debug\netstandard2.0\ref\SextantHelper.dll
+C:\Users\JBAdmin\Source\Repos\SextantHelper\SextantHelper\SextantHelper\bin\Debug\netstandard2.0\SextantHelper.pdb
+C:\Users\JBAdmin\Source\Repos\SextantHelper\SextantHelper\SextantHelper\obj\Debug\netstandard2.0\SextantHelper.csproj.AssemblyReference.cache
+C:\Users\JBAdmin\Source\Repos\SextantHelper\SextantHelper\SextantHelper\obj\Debug\netstandard2.0\SextantHelper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JBAdmin\Source\Repos\SextantHelper\SextantHelper\SextantHelper\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\JBAdmin\Source\Repos\SextantHelper\SextantHelper\SextantHelper\obj\Debug\netstandard2.0\PageAide.xaml.g.cs
+C:\Users\JBAdmin\Source\Repos\SextantHelper\SextantHelper\SextantHelper\obj\Debug\netstandard2.0\PageSights.xaml.g.cs
+C:\Users\JBAdmin\Source\Repos\SextantHelper\SextantHelper\SextantHelper\obj\Debug\netstandard2.0\PageSky.xaml.g.cs
+C:\Users\JBAdmin\Source\Repos\SextantHelper\SextantHelper\SextantHelper\obj\Debug\netstandard2.0\SextantHelper.AssemblyInfoInputs.cache
+C:\Users\JBAdmin\Source\Repos\SextantHelper\SextantHelper\SextantHelper\obj\Debug\netstandard2.0\SextantHelper.AssemblyInfo.cs
+C:\Users\JBAdmin\Source\Repos\SextantHelper\SextantHelper\SextantHelper\obj\Debug\netstandard2.0\SextantHelper.csproj.CoreCompileInputs.cache
+C:\Users\JBAdmin\Source\Repos\SextantHelper\SextantHelper\SextantHelper\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\JBAdmin\Source\Repos\SextantHelper\SextantHelper\SextantHelper\obj\Debug\netstandard2.0\SextantHelper.dll
+C:\Users\JBAdmin\Source\Repos\SextantHelper\SextantHelper\SextantHelper\obj\Debug\netstandard2.0\refint\SextantHelper.dll
+C:\Users\JBAdmin\Source\Repos\SextantHelper\SextantHelper\SextantHelper\obj\Debug\netstandard2.0\SextantHelper.pdb

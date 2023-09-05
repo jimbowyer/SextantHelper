@@ -6,6 +6,7 @@
     <ProduceReferenceAssemblyInOutDir>true</ProduceReferenceAssemblyInOutDir>
     <LangVersion>8.0</LangVersion>
     <RepositoryUrl>https://github.com/jimbowyer/SextantHelper</RepositoryUrl>
+    <Version>$(VersionPrefix)1.0.2.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

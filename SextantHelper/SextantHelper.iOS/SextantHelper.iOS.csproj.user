@@ -25,5 +25,6 @@
 </TargetiOSDevice>
     <DeveloperId>95GXNQBYD4</DeveloperId>
     <DevelopmentTeamId>95GXNQBYD4</DevelopmentTeamId>
+    <ProjectView>ProjectFiles</ProjectView>
   </PropertyGroup>
 </Project>

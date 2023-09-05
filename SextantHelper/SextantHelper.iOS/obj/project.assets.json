@@ -259,7 +259,7 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
-      "SextantHelper/1.0.0": {
+      "SextantHelper/1.0.2.1": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -507,7 +507,7 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
-      "SextantHelper/1.0.0": {
+      "SextantHelper/1.0.2.1": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -755,7 +755,7 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
-      "SextantHelper/1.0.0": {
+      "SextantHelper/1.0.2.1": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -1003,7 +1003,7 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
-      "SextantHelper/1.0.0": {
+      "SextantHelper/1.0.2.1": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -1251,7 +1251,7 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
-      "SextantHelper/1.0.0": {
+      "SextantHelper/1.0.2.1": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -1788,7 +1788,7 @@
         "xamarin.forms.nuspec"
       ]
     },
-    "SextantHelper/1.0.0": {
+    "SextantHelper/1.0.2.1": {
       "type": "project",
       "path": "../SextantHelper/SextantHelper.csproj",
       "msbuildProject": "../SextantHelper/SextantHelper.csproj"
@@ -1796,7 +1796,7 @@
   },
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
-      "SextantHelper >= 1.0.0",
+      "SextantHelper >= 1.0.2.1",
       "SkiaSharp.Views.Forms >= 2.88.5",
       "Xamarin.Essentials >= 1.8.0",
       "Xamarin.Forms >= 5.0.0.2612"
