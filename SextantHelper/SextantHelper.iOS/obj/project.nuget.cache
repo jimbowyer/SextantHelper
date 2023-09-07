@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2EA/IHeB3Z6lwqwa9XPjRtcY2Q4uZ8HIDR8VCaRJoJpa7ayvTeRJtYFcygIQEq0tUBjwWNPAqCKso2jaoYXK5w==",
+  "dgSpecHash": "HCyIclgIEyL/oxC7hJp83xebI4GW3+9RzPnUBQ6bTaOvMKvUJMVNUDJ/3J8THpDNfJNI6sw3e2SWZwVZtGrVSg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\JBAdmin\\source\\repos\\SextantHelper\\SextantHelper\\SextantHelper.iOS\\SextantHelper.iOS.csproj",
+  "projectFilePath": "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper.iOS\\SextantHelper.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JBAdmin\\.nuget\\packages\\skiasharp\\2.88.5\\skiasharp.2.88.5.nupkg.sha512",
     "C:\\Users\\JBAdmin\\.nuget\\packages\\skiasharp.nativeassets.ios\\2.88.5\\skiasharp.nativeassets.ios.2.88.5.nupkg.sha512",

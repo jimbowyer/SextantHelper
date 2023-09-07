@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JBAdmin\\source\\repos\\SextantHelper\\SextantHelper\\SextantHelper.Android\\SextantHelper.Android.csproj": {}
+    "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper.Android\\SextantHelper.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JBAdmin\\source\\repos\\SextantHelper\\SextantHelper\\SextantHelper.Android\\SextantHelper.Android.csproj": {
+    "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper.Android\\SextantHelper.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JBAdmin\\source\\repos\\SextantHelper\\SextantHelper\\SextantHelper.Android\\SextantHelper.Android.csproj",
+        "projectUniqueName": "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper.Android\\SextantHelper.Android.csproj",
         "projectName": "SextantHelper.Android",
-        "projectPath": "C:\\Users\\JBAdmin\\source\\repos\\SextantHelper\\SextantHelper\\SextantHelper.Android\\SextantHelper.Android.csproj",
+        "projectPath": "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper.Android\\SextantHelper.Android.csproj",
         "packagesPath": "C:\\Users\\JBAdmin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JBAdmin\\source\\repos\\SextantHelper\\SextantHelper\\SextantHelper.Android\\obj\\",
+        "outputPath": "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid13.0": {
             "projectReferences": {
-              "C:\\Users\\JBAdmin\\source\\repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj": {
-                "projectPath": "C:\\Users\\JBAdmin\\source\\repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj"
+              "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj": {
+                "projectPath": "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj"
               }
             }
           }
@@ -62,12 +62,12 @@
         }
       }
     },
-    "C:\\Users\\JBAdmin\\source\\repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj": {
+    "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj": {
       "version": "1.0.2.1",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JBAdmin\\source\\repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj",
+        "projectUniqueName": "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj",
         "projectName": "SextantHelper",
-        "projectPath": "C:\\Users\\JBAdmin\\source\\repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj",
+        "projectPath": "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj",
         "packagesPath": "C:\\Users\\JBAdmin\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper\\obj\\",
         "projectStyle": "PackageReference",

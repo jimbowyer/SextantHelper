@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2sejVCALQL0QS84TfCieCLKGs6xdqm8mYt1/OaPMH28G/0y+QbnkOR1hu+VvenI9xrIjzm2+OXJtwrcz82KFHA==",
+  "dgSpecHash": "twqfrdkYJx5ZMHm2o8I8FKlP5oKUOVmxb380ykzXvKkDQ+p5P4IEo++zmRJ897OxoqGPgF2WZh6oWXWTeSvuAg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\JBAdmin\\source\\repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj",
+  "projectFilePath": "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
