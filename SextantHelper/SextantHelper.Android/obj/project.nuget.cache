@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hljX5Lvac41wt5FAo9s2c1mlOSoUsUxP5gI+izS8llDbsgMyaxI4VRnCwT26L46N1R4xHH1O9G0pE0N45QvSGA==",
+  "dgSpecHash": "IjNydLicA7W1uBGQEJAkbJG15moG3cOoRZZL2GMFPTlAXv4hKluRenw9nEwaSbpBckh6HiirKiT9RYv+re0Yow==",
   "success": true,
-  "projectFilePath": "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper.Android\\SextantHelper.Android.csproj",
+  "projectFilePath": "C:\\Users\\JBAdmin\\source\\repos\\SextantHelper\\SextantHelper\\SextantHelper.Android\\SextantHelper.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JBAdmin\\.nuget\\packages\\skiasharp\\2.88.5\\skiasharp.2.88.5.nupkg.sha512",
     "C:\\Users\\JBAdmin\\.nuget\\packages\\skiasharp.nativeassets.android\\2.88.5\\skiasharp.nativeassets.android.2.88.5.nupkg.sha512",

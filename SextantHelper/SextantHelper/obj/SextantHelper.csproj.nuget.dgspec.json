@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj": {}
+    "C:\\Users\\JBAdmin\\source\\repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj": {
+    "C:\\Users\\JBAdmin\\source\\repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj": {
       "version": "1.0.2.1",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj",
+        "projectUniqueName": "C:\\Users\\JBAdmin\\source\\repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj",
         "projectName": "SextantHelper",
-        "projectPath": "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj",
+        "projectPath": "C:\\Users\\JBAdmin\\source\\repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj",
         "packagesPath": "C:\\Users\\JBAdmin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper\\obj\\",
+        "outputPath": "C:\\Users\\JBAdmin\\source\\repos\\SextantHelper\\SextantHelper\\SextantHelper\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

@@ -1809,11 +1809,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper.iOS\\SextantHelper.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\JBAdmin\\source\\repos\\SextantHelper\\SextantHelper\\SextantHelper.iOS\\SextantHelper.iOS.csproj",
       "projectName": "SextantHelper.iOS",
-      "projectPath": "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper.iOS\\SextantHelper.iOS.csproj",
+      "projectPath": "C:\\Users\\JBAdmin\\source\\repos\\SextantHelper\\SextantHelper\\SextantHelper.iOS\\SextantHelper.iOS.csproj",
       "packagesPath": "C:\\Users\\JBAdmin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper.iOS\\obj\\",
+      "outputPath": "C:\\Users\\JBAdmin\\source\\repos\\SextantHelper\\SextantHelper\\SextantHelper.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1834,8 +1834,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj": {
-              "projectPath": "C:\\Users\\JBAdmin\\Source\\Repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj"
+            "C:\\Users\\JBAdmin\\source\\repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj": {
+              "projectPath": "C:\\Users\\JBAdmin\\source\\repos\\SextantHelper\\SextantHelper\\SextantHelper\\SextantHelper.csproj"
             }
           }
         }

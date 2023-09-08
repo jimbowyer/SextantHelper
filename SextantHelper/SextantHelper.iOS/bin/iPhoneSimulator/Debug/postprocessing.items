@@ -9,7 +9,7 @@
       <dSYMInfoPlistRelativePath>SextantHelper.iOS.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
       <SymbolFile>\Users\jbadmin\Library\Caches\Xamarin\mtbs\builds\SextantHelper.iOS\6a8e1fa451623b31c01fefcc527e9cc85bb14a5547cbee819734469a5db1929b\obj\iPhoneSimulator\Debug\mtouch-symbols.list</SymbolFile>
       <DSymName>SextantHelper.iOS.app.dSYM</DSymName>
-      <SourceProjectPath>C:\Users\JBAdmin\Source\Repos\SextantHelper\SextantHelper\SextantHelper.iOS</SourceProjectPath>
+      <SourceProjectPath>C:\Users\JBAdmin\source\repos\SextantHelper\SextantHelper\SextantHelper.iOS</SourceProjectPath>
     </_PostProcessingItem>
   </ItemGroup>
 </Project>
