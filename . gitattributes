@@ -1,3 +1,4 @@
 # used to help exclude auto generated files from GH language crawler
 
-SextantHelper/SextantHelper.Android/obj/** linguist-generated 
+SextantHelper/SextantHelper.Android/obj/** linguist-generated
+SextantHelper/SextantHelper.iOS/obj/** linguist-generated
