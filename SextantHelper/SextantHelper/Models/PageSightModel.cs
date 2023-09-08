@@ -118,7 +118,7 @@ namespace SextantHelper.Models
                 } //while deg
 
                 //add to collection view.
-                // *NICE DO*... add persist state between app starts
+                // *NICE TO*... consdier adding persist state between app starts
                 if (newSight != null)
                 {
                     if (MySights == null)
