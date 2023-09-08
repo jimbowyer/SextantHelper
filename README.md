@@ -7,3 +7,5 @@ App is written in C# using Xamarin Forms. So far this is crude outline, works en
 If you're looking for solar noon examples there are better ones out there and NOAA is great reference. Ditto lunar phases. These items are included to help offline sextant user who know which hemisphere they are in and approximate latitude...sufficient to determine a timezone.
 
 <img width="311" alt="SightPage" src="https://user-images.githubusercontent.com/13039619/166329375-86d2e62d-6f05-4870-9bfe-fdec47eac483.png"/>
+<br/>
+<img width="311" alt="SightPage" src="https://github.com/jimbowyer/SextantHelper/blob/master/SkyCalcs_GH.png"/>
